@@ -1,6 +1,7 @@
 import '../Styles/OrdersPage.css'
 import  OrderItem  from "../Components/OrderItem";
 import PageTitle from "../Components/PageTitle";
+import OrderPageTotalPrice from '../Components/OrderPageTotalPrice';
 function OredersPage() {
     return ( 
         
@@ -9,6 +10,7 @@ function OredersPage() {
             <OrderItem />
             <OrderItem />
             <OrderItem />
+            <OrderPageTotalPrice /> 
         </section>
     
         
