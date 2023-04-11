@@ -1,0 +1,99 @@
+.ticket__container {
+    margin: auto;
+    background: white;
+    max-width: 20rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+}
+
+.ticket__container p,
+h2,
+h3 {
+    font-family: "Fira Sans";
+}
+
+.ticket__container h1 {
+    margin: 1rem 0;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.ticket__artist {
+    border: 1px dotted grey;
+    padding: 0 1rem;
+}
+
+.ticket__location {
+    padding: 0 1rem;
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.ticket__location h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.ticket__location p:nth-child(3) {
+    margin-top: 0.3rem;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.ticket__date-time {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.ticket__date-time section {
+    width: 100%;
+    padding: 0 1rem;
+    border-left: 1px dotted grey;
+    border-bottom: 1px dotted grey;
+    border-top: 1px dotted grey;
+}
+
+.ticket__date-time section:nth-child(1) {
+    border-left: 0 grey;
+}
+
+.ticket__date-time h3 {
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+}
+
+.ticket__info {
+    padding: 0 1rem;
+    background-color: rgba(0, 0, 0, 0.06);
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.ticket__barcode {
+    padding-top: 2.5rem;
+    background: rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.ticket__barcode p {
+    margin-bottom: 1rem;
+    margin-top: 0;
+    text-align: center;
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 0.3rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.ticket__sub-title {
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 800;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}

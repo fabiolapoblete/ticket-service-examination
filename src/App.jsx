@@ -4,6 +4,7 @@ import NavButton from "./Components/NavButton";
 import PageTitle from "./Components/PageTitle";
 import SearchBar from "./Components/SearchBar";
 import LandingPage from "./Pages/LandinPage";
+import TicketsPage from "./Pages/TicketsPage";
 import "./Styles/App.css";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
             <PageTitle />
             <FooterNav />
             <LandingPage />
+            <TicketsPage />
         </div>
     );
 }
