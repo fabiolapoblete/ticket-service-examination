@@ -1,3 +1,4 @@
+import FooterNav from "./Components/FooterNav";
 import NavButton from "./Components/NavButton";
 import PageTitle from "./Components/PageTitle";
 import "./Styles/App.css";
@@ -7,7 +8,7 @@ function App() {
         <div className="App">
             <h1>Hej</h1>
             <PageTitle />
-            <NavButton />
+            <FooterNav />
         </div>
     );
 }

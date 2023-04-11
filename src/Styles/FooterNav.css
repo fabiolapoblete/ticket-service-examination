@@ -5,6 +5,11 @@
     --third-text-color: #ffffffcc;
 }
 
+.footerNav__container {
+    display: flex;
+    gap: 0.5rem;
+}
+
 .navButton {
     background-color: var(--main-text-color);
     width: 1rem;
