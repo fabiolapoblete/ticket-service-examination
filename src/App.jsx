@@ -1,9 +1,10 @@
-import "./Styles/App.css";
+import EventInfo from "./Components/EventInfo";
+// import "./Styles/App.css";
 
 function App() {
     return (
         <div className="App">
-            <h1>Hej</h1>
+            <EventInfo />
         </div>
     );
 }
