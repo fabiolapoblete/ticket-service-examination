@@ -1,0 +1,13 @@
+:root {
+    --background-color: #231f42;
+    --main-text-color: #f56b9a;
+    --secondary-text-color: #37aeab;
+    --third-text-color: #ffffffcc;
+}
+
+.navButton {
+    background-color: var(--main-text-color);
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+}
