@@ -10,6 +10,10 @@
   --main-font: 'Fira sans';
 }
 
+body {
+  background-color: var(--background-color);
+}
+
 h1 {
   font-size: 32px;
   font-family: var(--header-font);
