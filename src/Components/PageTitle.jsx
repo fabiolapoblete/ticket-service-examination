@@ -1,7 +1,11 @@
 import "../Styles/App.css";
 
 function PageTitle({ title }) {
-  return <h1>{title}</h1>;
+    return (
+        <header>
+            <h1>{title}</h1>
+        </header>
+    );
 }
 
 export default PageTitle;
