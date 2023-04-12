@@ -1,5 +1,6 @@
 import "../Styles/EventItem.css";
 
+
 function EventItem({ event }) {
   const { name, price, where, when } = event;
   const { date, from, to } = when;
