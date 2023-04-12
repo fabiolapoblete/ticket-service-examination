@@ -7,7 +7,7 @@ function SearchBar() {
         className="searchBar"
         type="search"
         placeholder="&#x1F50E;&#xFE0E;"
-        onChange={console.log("changed input")}
+        //onChange
       />
     </form>
   );

@@ -3,26 +3,26 @@ import PageTitle from "../Components/PageTitle";
 import SearchBar from "../Components/SearchBar";
 import HeaderNav from "../Components/HeaderNav";
 import FooterNav from "../Components/FooterNav";
-
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { dataContext } from "../App";
 
 function EventsPage() {
-    return (
-        <>
-            <HeaderNav />
-            <header>
-                <PageTitle />
-            </header>
-            <main>
-                <SearchBar />
-                <EventItem />
-                <EventItem />
-                <EventItem />
-                <EventItem />
-            </main>
-            <FooterNav />
-        </>
-    );
+  const events = useContext(dataContext);
+  console.log(events);
+  return (
+    <>
+      <HeaderNav />
+      <header>
+        <PageTitle />
+      </header>
+      <main>
+        <SearchBar />
+        {events &&
+          events.map((event, i) => <EventItem key={i} event={event} />)}
+      </main>
+      <FooterNav />
+    </>
+  );
 }
 
 export default EventsPage;
