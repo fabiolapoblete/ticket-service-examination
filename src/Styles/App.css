@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Sansita&display=swap%27');
+
+:root {
+  --background-color: #231F42;
+  --main-text-color: #F56B9A;
+  --secondary-text-color: #37AEAB;
+  --third-text-color: #FFFFFFCC;
+
+  --header-font: 'Sansita';
+  --main-font: 'Fira sans';
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+h1 {
+  font-size: 32px;
+  font-family: var(--header-font);
+  font-weight: 400;
+  color: var(--main-text-color);
+}
