@@ -7,7 +7,7 @@ import { useContext, useState } from "react";
 import { dataContext } from "../App";
 
 function EventsPage() {
-    const events = useContext(dataContext);
+    const [events] = useContext(dataContext);
     const [filteredEvents, setFilteredEvents] = useState(events);
     console.log(filteredEvents);
     return (

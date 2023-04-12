@@ -7,10 +7,10 @@ import ErrorPage from "./Pages/ErrorPage";
 import "./Styles/App.css";
 
 import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
+    BrowserRouter as Router,
+    Route,
+    Routes,
+    Navigate,
 } from "react-router-dom";
 
 import { createContext, useEffect, useState } from "react";
@@ -18,38 +18,39 @@ import { createContext, useEffect, useState } from "react";
 export const dataContext = createContext();
 
 function App() {
-  const [event, setEvent] = useState([]);
+    const [event, setEvent] = useState([]);
+    const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    async function fetchEvents() {
-      try {
-        const response = await fetch(
-          "https://majazocom.github.io/Data/events.json"
-        );
-        const data = await response.json();
-        setEvent(data.events);
-      } catch (error) {
-        console.error(error, "Something went wrong");
-      }
-    }
-    fetchEvents();
-  }, []);
+    useEffect(() => {
+        async function fetchEvents() {
+            try {
+                const response = await fetch(
+                    "https://majazocom.github.io/Data/events.json"
+                );
+                const data = await response.json();
+                setEvent(data.events);
+            } catch (error) {
+                console.error(error, "Something went wrong");
+            }
+        }
+        fetchEvents();
+    }, []);
 
-  return (
-    <dataContext.Provider value={event}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/events" element={<EventsPage />} />
-          <Route path="/events/single" element={<SinglePage />} />
-          <Route path="/orders" element={<OrdersPage />} />
-          <Route path="/tickets" element={<TicketsPage />} />
-          <Route path="/error" element={<ErrorPage />} />
-          <Route path="*" element={<Navigate to="/error" />} />
-        </Routes>
-      </Router>
-    </dataContext.Provider>
-  );
+    return (
+        <dataContext.Provider value={[event, setCart, cart]}>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<LandingPage />} />
+                    <Route path="/events" element={<EventsPage />} />
+                    <Route path="/events/:name" element={<SinglePage />} />
+                    <Route path="/orders" element={<OrdersPage />} />
+                    <Route path="/tickets" element={<TicketsPage />} />
+                    <Route path="/error" element={<ErrorPage />} />
+                    <Route path="*" element={<Navigate to="/error" />} />
+                </Routes>
+            </Router>
+        </dataContext.Provider>
+    );
 }
 
 export default App;

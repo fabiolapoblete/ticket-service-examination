@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { dataContext } from "../App";
 
 function SearchBar({ setFilteredEvents }) {
-    const events = useContext(dataContext);
+    const [events] = useContext(dataContext);
 
     const filterItems = (e) => {
         if (e.target.value === "") {
