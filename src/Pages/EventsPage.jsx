@@ -13,7 +13,7 @@ function EventsPage() {
     <>
       <HeaderNav />
       <header>
-        <PageTitle />
+        <PageTitle title="Events" />
       </header>
       <main>
         <SearchBar />

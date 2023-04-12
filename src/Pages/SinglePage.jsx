@@ -1,4 +1,3 @@
-import HeaderNav from "../Components/HeaderNav";
 import PrimamaryButton from "../Components/PrimaryButton";
 import TicketSelector from "../Components/TicketSelector";
 import EventInfo from "../Components/EventInfo";
@@ -8,11 +7,13 @@ function SinglePage() {
   return (
     <>
       <article className="event-info--container">
-        <PageTitle />
-        <p className="event-info--quote">You are about to score some tickets to</p>
+        <PageTitle title="Event" />
+        <p className="event-info--quote">
+          You are about to score some tickets to
+        </p>
         <EventInfo />
         <TicketSelector />
-        <PrimamaryButton />
+        <PrimamaryButton title="Lägg i varukorgen" />
       </article>
     </>
   );
