@@ -1,7 +1,7 @@
 import "../Styles/App.css";
 
-function PrimaryButton() {
-  return <button className="primaryButton">Title goes here</button>;
+function PrimaryButton({ title }) {
+  return <button className="primaryButton">{title}</button>;
 }
 
 export default PrimaryButton;
