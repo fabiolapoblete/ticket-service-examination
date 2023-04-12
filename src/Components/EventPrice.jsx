@@ -1,7 +1,7 @@
 import "../styles/eventPrice.css";
 
 function EventPrice({event}) {
-  const {price } = event;
+  const { price } = event;
   return (
     <article className="eventpriceContainer">
       <section className="eventpriceContainer__price">1050 sek</section>
