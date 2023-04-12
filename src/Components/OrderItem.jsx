@@ -1,13 +1,14 @@
 import "../Styles/OrderItem.css";
 
 
-function OrderItem() {
-    
+function OrderItem({event}) {
+    const { name, price, where, when } = event;
+    const { date, from, to } = when;
     return ( 
        <article className="OrderItem">
             <section className="OrderItem_header">
-                <h2>Lasse-Stefanz</h2>
-                <p>21 mars kl 19:00 - 21:00</p>
+                <h2>{name}</h2>
+                <p>{date} kl {from} - {to}</p>
             </section>
             <ul className="OrderItem_quantity">
                 <li className="OrderItem_quantity-btn">-</li>
