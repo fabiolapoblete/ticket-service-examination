@@ -10,7 +10,7 @@ function SearchBar({ setFilteredEvents }) {
             setFilteredEvents(events);
         } else {
             const list = events.filter((item) =>
-                item.name.includes(e.target.value)
+                item.name.toUpperCase().includes(e.target.value.toUpperCase())
             );
             setFilteredEvents(list);
         }

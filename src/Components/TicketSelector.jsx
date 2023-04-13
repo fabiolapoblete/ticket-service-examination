@@ -1,26 +1,26 @@
-import { useEffect, useState, useContext } from "react";
 import PrimaryButton from "./PrimaryButton";
+import { useEffect, useState, useContext } from "react";
 import { dataContext } from "../App";
 
 function TicketSelector({ currentEvent }) {
-    const [noOfTickets, setNoOfTickets] = useState(1);
-    const [totalPrice, setTotalPrice] = useState();
     const [event, setCart, cart] = useContext(dataContext);
-
-    useEffect(() => {
-        setTotalPrice(noOfTickets * currentEvent.price);
-    }, [currentEvent, noOfTickets]);
+    const [noOfTickets, setNoOfTickets] = useState(1);
+    const [totalPrice, setTotalPrice] = useState(0);
 
     const decrement = () => {
-        if (noOfTickets > 1) {
-            setNoOfTickets(noOfTickets - 1);
-        }
+        noOfTickets > 1 && setNoOfTickets(noOfTickets - 1);
     };
 
     const increment = () => {
         setNoOfTickets(noOfTickets + 1);
     };
 
+    // Calculates the total price each change of tickets
+    useEffect(() => {
+        setTotalPrice(noOfTickets * currentEvent.price);
+    }, [currentEvent, noOfTickets]);
+
+    // Adds a new order object with additional fields to the Cart
     const addToCart = () => {
         const orderObj = {
             ...currentEvent,

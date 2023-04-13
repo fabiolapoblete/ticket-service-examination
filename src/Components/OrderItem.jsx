@@ -1,47 +1,40 @@
-import { useEffect, useState } from "react";
 import "../Styles/OrderItem.css";
-import { useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { dataContext } from "../App";
 
 function OrderItem({ currentEvent, index, setTotalCartPrice }) {
-    let currentTickets = currentEvent.noOfTickets;
-    const [noOfTickets, setNoOfTickets] = useState(currentTickets);
     const [event, setCart, cart] = useContext(dataContext);
+    const [totalTickets, setTotalTickets] = useState(currentEvent.noOfTickets);
+
     const { name, when } = currentEvent;
+    const { date, from, to } = when;
+    let cartCopy = cart; // Copy of cart array to manipulate event directly at event index
 
-    let cartList = cart;
-
-    const calcTotalPrice = () => {
-        let calcPrice = 0;
-
-        cart.forEach((item) => {
-            calcPrice += item.totalPrice;
-        });
-
-        setTotalCartPrice(calcPrice);
+    const calcTotalCartPrice = () => {
+        let cartTotal = 0;
+        cart.forEach((item) => (cartTotal += item.totalPrice));
+        setTotalCartPrice(cartTotal); // Updates the parent component state
     };
 
-    const deleteItem = () => {
-        setCart(cartList.filter((item) => item.noOfTickets > 0));
+    const deleteItemFromCart = () => {
+        setCart(cartCopy.filter((item) => item.noOfTickets > 0));
     };
-
-    useEffect(() => {
-        cartList[index].noOfTickets = noOfTickets;
-        cartList[index].totalPrice = cartList[index].price * noOfTickets;
-        setCart(cartList);
-        deleteItem();
-        calcTotalPrice();
-    }, [noOfTickets]);
 
     const decrement = () => {
-        if (noOfTickets > 0) {
-            setNoOfTickets(noOfTickets - 1);
-        }
+        totalTickets > 0 && setTotalTickets(totalTickets - 1);
     };
 
     const increment = () => {
-        setNoOfTickets(noOfTickets + 1);
+        setTotalTickets(totalTickets + 1);
     };
+
+    // Updates the cart items data when the amout of tickets change
+    useEffect(() => {
+        cartCopy[index].noOfTickets = totalTickets;
+        cartCopy[index].totalPrice = currentEvent.price * totalTickets;
+        totalTickets == 0 ? deleteItemFromCart() : setCart(cartCopy);
+        calcTotalCartPrice();
+    }, [totalTickets]);
 
     return (
         <article className="OrderItem">
@@ -55,7 +48,9 @@ function OrderItem({ currentEvent, index, setTotalCartPrice }) {
                 <li onClick={decrement} className="OrderItem_quantity-btn">
                     -
                 </li>
-                <li className="OrderItem_quantity-quantity">{noOfTickets}</li>
+                <li className="OrderItem_quantity-quantity">
+                    {currentEvent.noOfTickets}
+                </li>
                 <li onClick={increment} className="OrderItem_quantity-btn">
                     +
                 </li>

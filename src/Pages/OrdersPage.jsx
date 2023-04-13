@@ -3,13 +3,13 @@ import OrderItem from "../Components/OrderItem";
 import PageTitle from "../Components/PageTitle";
 import OrderPageTotalPrice from "../Components/OrderPageTotalPrice";
 import PrimaryButton from "../Components/PrimaryButton";
-
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { dataContext } from "../App";
 
 function OrdersPage() {
     const [event, setCart, cart] = useContext(dataContext);
     const [totalCartPrice, setTotalCartPrice] = useState(0);
+
     return (
         <section className="Orders__Page">
             <PageTitle title="Order" />
@@ -19,12 +19,11 @@ function OrdersPage() {
                     <OrderItem
                         setTotalCartPrice={setTotalCartPrice}
                         currentEvent={item}
-                        key={i}
+                        key={item.name + i}
                         index={i}
                     />
                 ))}
             <OrderPageTotalPrice totalCartPrice={totalCartPrice} />
-
             <PrimaryButton title="Skicka order" />
         </section>
     );
