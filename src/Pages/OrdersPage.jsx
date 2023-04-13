@@ -3,17 +3,31 @@ import OrderItem from "../Components/OrderItem";
 import PageTitle from "../Components/PageTitle";
 import OrderPageTotalPrice from "../Components/OrderPageTotalPrice";
 import PrimaryButton from "../Components/PrimaryButton";
+
+import { useContext, useEffect, useState } from "react";
+import { dataContext } from "../App";
+
 function OrdersPage() {
-  return (
-    <section className="Orders__Page">
-      <PageTitle title="Order" />
-      <OrderItem />
-      <OrderItem />
-      <OrderItem />
-      <OrderPageTotalPrice />
-      <PrimaryButton title="Skicka order" />
-    </section>
-  );
+    const [event, setCart, cart] = useContext(dataContext);
+    const [totalCartPrice, setTotalCartPrice] = useState(0);
+    return (
+        <section className="Orders__Page">
+            <PageTitle title="Order" />
+
+            {cart &&
+                cart.map((item, i) => (
+                    <OrderItem
+                        setTotalCartPrice={setTotalCartPrice}
+                        currentEvent={item}
+                        key={i}
+                        index={i}
+                    />
+                ))}
+            <OrderPageTotalPrice totalCartPrice={totalCartPrice} />
+
+            <PrimaryButton title="Skicka order" />
+        </section>
+    );
 }
 
 export default OrdersPage;

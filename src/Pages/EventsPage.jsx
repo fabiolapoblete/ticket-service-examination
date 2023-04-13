@@ -9,7 +9,6 @@ import { dataContext } from "../App";
 function EventsPage() {
     const [events] = useContext(dataContext);
     const [filteredEvents, setFilteredEvents] = useState(events);
-    console.log(filteredEvents);
     return (
         <>
             <HeaderNav />

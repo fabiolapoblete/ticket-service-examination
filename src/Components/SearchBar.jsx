@@ -13,7 +13,6 @@ function SearchBar({ setFilteredEvents }) {
                 item.name.includes(e.target.value)
             );
             setFilteredEvents(list);
-            console.log(list, "updated list here ");
         }
     };
 

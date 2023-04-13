@@ -11,12 +11,8 @@ function TicketSelector({ currentEvent }) {
         setTotalPrice(noOfTickets * currentEvent.price);
     }, [currentEvent, noOfTickets]);
 
-    useEffect(() => {
-        console.log(cart, "CART HERE");
-    }, [cart]);
-
     const decrement = () => {
-        if (noOfTickets > 0) {
+        if (noOfTickets > 1) {
             setNoOfTickets(noOfTickets - 1);
         }
     };
