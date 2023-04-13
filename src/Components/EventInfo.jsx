@@ -1,7 +1,7 @@
 import "../Styles/EventInfo.css";
 
-function EventInfo({ event }) {
-    const { name, where, when } = event;
+function EventInfo({ currentEvent }) {
+    const { name, where, when } = currentEvent;
 
     return (
         <>

@@ -3,6 +3,7 @@ import "../Styles/EventItem.css";
 
 function EventItem({ event }) {
     const { name, price, where, when } = event;
+    const { from, to } = when;
 
     return (
         <Link to={`/events/${name}`}>
@@ -14,7 +15,7 @@ function EventItem({ event }) {
                     <h2 className="event__item--artist">{name}</h2>
                     <p className="event__item--location">{where}</p>
                     <p className="event__item--time">
-                        {when.from}-{when.to}
+                        {from}-{to}
                     </p>
                     <p className="event__item--price">{price} SEK</p>
                 </section>

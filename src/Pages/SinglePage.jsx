@@ -1,10 +1,9 @@
-import PrimamaryButton from "../Components/PrimaryButton";
-import TicketSelector from "../Components/TicketSelector";
-import EventInfo from "../Components/EventInfo";
 import PageTitle from "../Components/PageTitle";
+import EventInfo from "../Components/EventInfo";
+import TicketSelector from "../Components/TicketSelector";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { dataContext } from "../App";
-import { useContext, useEffect, useState } from "react";
 
 function SinglePage() {
     const defaultObj = {
@@ -17,12 +16,12 @@ function SinglePage() {
             to: "",
         },
     };
+
     let { name } = useParams();
     const [events] = useContext(dataContext);
-
     const [currentEvent, setCurrentEvent] = useState(defaultObj);
 
-    // Finds the correct event based off the URL
+    // Renders the correct event based off the URL param
     useEffect(() => {
         events.forEach((event) => {
             if (event.name === name) {
@@ -38,11 +37,8 @@ function SinglePage() {
                 <p className="event-info--quote">
                     You are about to score some tickets to
                 </p>
-                <EventInfo event={currentEvent} />
-                <TicketSelector
-                    currentEvent={currentEvent}
-                    price={currentEvent.price}
-                />
+                <EventInfo currentEvent={currentEvent} />
+                <TicketSelector currentEvent={currentEvent} />
             </article>
         </>
     );
