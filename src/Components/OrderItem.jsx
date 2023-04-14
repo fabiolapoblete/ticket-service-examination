@@ -45,15 +45,15 @@ function OrderItem({ currentEvent, index, setTotalCartPrice }) {
                 </p>
             </section>
             <ul className="OrderItem_quantity">
-                <li onClick={decrement} className="OrderItem_quantity-btn">
+                <button onClick={decrement} className="OrderItem_quantity-btn">
                     -
-                </li>
-                <li className="OrderItem_quantity-quantity">
+                </button>
+                <button className="OrderItem_quantity-quantity">
                     {currentEvent.noOfTickets}
-                </li>
-                <li onClick={increment} className="OrderItem_quantity-btn">
+                </button>
+                <button onClick={increment} className="OrderItem_quantity-btn">
                     +
-                </li>
+                </button>
             </ul>
         </article>
     );

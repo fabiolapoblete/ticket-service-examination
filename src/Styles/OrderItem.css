@@ -17,6 +17,8 @@
     padding: .5rem 1rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 }
 
 .OrderItem_header h2 {
@@ -24,7 +26,7 @@
     font-family: var(--header-font);
     line-height: 0;
     font-weight: 800;
-    font-size: 24px;
+    font-size: 20px;
 }   
 
 
@@ -44,21 +46,17 @@
     justify-content: space-between;
 
 }
-.OrderItem_quantity >  li {
-    text-align: center;
-    border:1px solid var(--main-text-color) ;
-    padding:0;
-    font-size: 36px;
-    color: var(--third-text-color);
-    padding: .5rem 0;
-
-}
 
 .OrderItem_quantity-btn{
     flex-shrink:1;
     flex-basis: 25%;
     transition: .5s;
-
+    background-color: transparent;
+    border: none;
+    color: var(--third-text-color);
+    font-size: 28px;
+    text-align: center;
+    border:1px solid var(--main-text-color) ;
     
 }
 .OrderItem_quantity-btn:hover {
@@ -67,5 +65,13 @@
     transition: .15s;
 }
 .OrderItem_quantity-quantity{
-    flex:1;
+    flex: 1;
+    border: none;
+    color: var(--third-text-color);
+    background-color: transparent;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    border:1px solid var(--main-text-color) ;
+
 }
