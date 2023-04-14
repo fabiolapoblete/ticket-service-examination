@@ -7,43 +7,43 @@ import { dataContext } from "../App";
 import HeaderNav from "../Components/HeaderNav";
 
 function SinglePage() {
-    const defaultObj = {
-        name: "",
-        price: "",
-        where: "",
-        when: {
-            date: "",
-            from: "",
-            to: "",
-        },
-    };
+  const defaultObj = {
+    name: "",
+    price: "",
+    where: "",
+    when: {
+      date: "",
+      from: "",
+      to: "",
+    },
+  };
 
-    let { name } = useParams();
-    const [events] = useContext(dataContext);
-    const [currentEvent, setCurrentEvent] = useState(defaultObj);
+  let { name } = useParams();
+  const [events] = useContext(dataContext);
+  const [currentEvent, setCurrentEvent] = useState(defaultObj);
 
-    // Renders the correct event based off the URL param
-    useEffect(() => {
-        events.forEach((event) => {
-            if (event.name === name) {
-                setCurrentEvent(event);
-            }
-        });
-    }, []);
+  // Renders the correct event based off the URL param
+  useEffect(() => {
+    events.forEach((event) => {
+      if (event.name === name) {
+        setCurrentEvent(event);
+      }
+    });
+  }, []);
 
-    return (
-        <article className="SinglePage__container">
-            <HeaderNav />
-            <section className="event-info--container">
-                <PageTitle title="Event" />
-                <p className="event-info--quote">
-                    You are about to score some tickets to
-                </p>
-                <EventInfo currentEvent={currentEvent} />
-                <TicketSelector currentEvent={currentEvent} />
-            </section>
-        </article>
-    );
+  return (
+    <article className="SinglePage__container">
+      <HeaderNav to="/events" />
+      <section className="event-info--container">
+        <PageTitle title="Event" />
+        <p className="event-info--quote">
+          You are about to score some tickets to
+        </p>
+        <EventInfo currentEvent={currentEvent} />
+        <TicketSelector currentEvent={currentEvent} />
+      </section>
+    </article>
+  );
 }
 
 export default SinglePage;

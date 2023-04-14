@@ -1,10 +1,15 @@
+import { NavLink } from "react-router-dom";
 import "../Styles/headerNav.css";
 
-function HeaderNav() {
+function HeaderNav({ to }) {
   return (
     <nav className="navbar">
-      <img src="/src/assets/arrow_back.svg" alt="arrow back" />
-      <img src="/src/assets/shopping_cart2.svg" alt="shopping cart" />
+      <NavLink to={to}>
+        <img src="/src/assets/arrow_back.svg" alt="arrow back" />
+      </NavLink>
+      <NavLink to="/orders">
+        <img src="/src/assets/shopping_cart2.svg" alt="shopping cart" />
+      </NavLink>
     </nav>
   );
 }

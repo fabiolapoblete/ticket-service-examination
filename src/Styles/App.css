@@ -33,6 +33,10 @@ h3 {
   line-height: 1.5rem;
 }
 
+button {
+  cursor: pointer;
+}
+
 .pageTitle__header {
   display: flex;
   justify-content: center;
