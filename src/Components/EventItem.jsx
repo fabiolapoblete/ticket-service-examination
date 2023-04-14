@@ -6,7 +6,7 @@ function EventItem({ event }) {
 
   return (
     <Link to={`/events/${name}`}>
-        <section className="event__item--wrapper">
+      <section className="event__item--wrapper">
         <article className="event__item">
           <section className="event__item--date">
             <p>{when.date}</p>
@@ -22,11 +22,9 @@ function EventItem({ event }) {
               <p className="event__item--price">{price} SEK</p>
             </section>
             <span className="event__item--underscore"></span>
-
           </section>
         </article>
-        </section>
-
+      </section>
     </Link>
   );
 }

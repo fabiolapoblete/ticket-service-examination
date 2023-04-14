@@ -6,14 +6,18 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 .event__item--wrapper {
     display: flex;
     justify-content: center;
-    
 }
 
-
 .event__item {
+    font-family: var(--main-font);
+    color: var(--third-text-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,50 +25,51 @@
     gap: 1rem;
 }
 
-.event__item h2, p {
+/* .event__item h2, p {
     font-family: var(--main-font);
     color: var(--third-text-color);
-}
+} */
 
 .event__item--date {
     display: flex;
-    margin: 0.5rem;
-    border: 1px solid var(--third-text-color);
     font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    flex: 1;
-    padding: 1rem;
-    margin-left: 0;
+    font-size: 0.9rem;
+    /* line-height: 17px; */
+    border: 1px solid var(--third-text-color);
     border-radius: 5px;
+    padding: 1rem;
+    margin: 0.5rem;
+    margin-left: 0;
+    flex: 1;
+    text-align: center;
+    word-spacing: 62.5rem;
 }
 
-.event__item--date p {
+/* .event__item--date p {
     display: block;
     width: 100%;
     text-align: center;
     word-spacing: 1000px;
-
-}
-
-.event__item--artist {
-    font-size: 22px;
-    line-height: 26px;
-}
+} */
 
 .event__item--info {
     width: 100%;
     display: flex;
     flex-direction: column;
     flex-basis: 70%;
-    
+}
+
+.event__item--artist {
+    font-size: 1.4rem;
+    text-shadow: 1px 1px #F56B9A;
+    /* line-height: 26px; */
 }
 
 .event__item--location {
     font-style: italic;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.8rem;
+    /* line-height: 14px; */
 }
 
 .event__item--timePrice-wrapper {
@@ -72,20 +77,15 @@
     justify-content: space-between;
 }
 
-
 .event__item--time {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 0.9rem;
+    /* line-height: 17px; */
 } 
 .event__item--price {
     color: var(--secondary-text-color);
-    font-size: 17px;
+    font-size: 1.1rem;
     line-height: 20px;
 }
 .event__item--underscore {
     border-bottom: 1px solid white;
-}
-
-a {
-    text-decoration: none;
 }

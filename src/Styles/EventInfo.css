@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: var(--main-font);
+    color: var(--third-text-color);
 }
 
 .event-info--wrapper {
@@ -12,27 +14,27 @@
 }
 
 .event-info--quote {
-    font-family: --main-font;
-    color: var(--third-text-color);
+    /* font-family: var(--main-font); */
+    /* color: var(--third-text-color); */
     font-style: italic;
     font-weight: 400;
     font-size: 19px;
-    line-height: 23px;
-    margin: 1.5rem
+    /* line-height: 23px; */
+    margin: 1.5rem;
+    text-align: center;
 }
 
 .event-info--name {
-    font-family: var(--header-font);
     color: var(--main-text-color);
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
+    font-family: var(--header-font);
+    font-weight: 600;
+    font-size: 40px;
     line-height: 41px;
     margin-top: 20px;
 }
 
 .event-info--date {
-    font-family: var(--main-font);
+    /* font-family: var(--main-font); */
     font-weight: 700;
     color: #37AEAB;
     font-weight: 700;
@@ -41,7 +43,7 @@
 }
 
 .event-info--location {
-    color: var(--third-text-color);
+    /* color: var(--third-text-color); */
     font-style: italic;
     font-weight: 400;
     font-size: 16px;
@@ -66,8 +68,9 @@
 .event-info--choser h4 {
     font-size: 28px;
     line-height: 39px;
-    font-family: var(--main-font);
+    /* font-family: var(--main-font); */
     padding: 0.5rem 2rem;
+    /*Fixa till border här*/
     border-top: 1px solid #F56B9A;
     border-right: 1px solid #F56B9A;
     border-left: 1px solid #F56B9A;
@@ -75,21 +78,23 @@
 }
 
 .event-info--choser-btn {
+    display: flex;
+    align-items: flex-end;
     background-color: transparent;
     color: var(--third-text-color);
+    font-size: 28px;
+    line-height: 39px;
+    padding: 0.5rem 1.5rem;
     border: 1px solid #F56B9A;
+    /*Vi behöver fixa border här*/
     border-right: 0px;
     border-left: 0px;
     border-bottom: 0px;
-    padding: 0.5rem 1.5rem;
-    font-size: 28px;
-    line-height: 39px;
-    display: flex;
-    align-items: flex-end;
+    /**/
 }
 
 
-.event-info--primary-button {
+/* .event-info--primary-button {
     background-color: #37AEAB;
     color: var(--third-text-color);
     margin: 1rem;
@@ -98,4 +103,4 @@
     font-size: 22px;
     line-height: 26px;
     justify-self: flex-end;
-}
+} */

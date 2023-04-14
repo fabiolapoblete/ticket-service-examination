@@ -1,13 +1,13 @@
 import "../Styles/LandingPage.css";
 import PrimaryButton from "../Components/PrimaryButton";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import PageTitle from "../Components/PageTitle";
 
 function LandingPage() {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   function handleClick() {
-      navigate('/events')
+    navigate("/events");
   }
 
   return (
@@ -18,12 +18,12 @@ function LandingPage() {
           src={"src/assets/LandingPage-image.png"}
           alt="Welcoming image of Where Its At application"
         />
-        <h1 className="landingPage__header">Where it's @</h1>
+        {/* <h1 className="landingPage__header">Where it's @</h1> */}
+        <PageTitle title="Where It's @" />
         <h2 className="landingPage__sub-header">Ticketing made easy</h2>
-        <section className="landingPage__btn">
+        <section>
           <PrimaryButton action={handleClick} title="Continue" />
         </section>
-
       </section>
     </article>
   );

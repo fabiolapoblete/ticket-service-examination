@@ -10,23 +10,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+    gap: 0.5rem;
+    text-shadow: 1px 1px #000;
 }
 
-.landingPage h1 {
+/* .landingPage h1 {
     font-size: 32px;
     line-height: 37px;
     margin: 0.5rem;
-}
+} */
 
-.landingPage h2 {
+.landingPage__sub-header {
     font-family: var(--main-font);
     color: var(--third-text-color);
     font-style: italic;
     font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    /* line-height: 26px; */
+    /* margin-bottom: 1rem; */
 }
 
 .landingPage__image {
