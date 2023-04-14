@@ -22,12 +22,37 @@ function TicketSelector({ currentEvent }) {
 
     // Adds a new order object with additional fields to the Cart
     const addToCart = () => {
-        const orderObj = {
-            ...currentEvent,
-            noOfTickets: noOfTickets,
-            totalPrice: totalPrice,
-        };
-        setCart([...cart, orderObj]);
+        let matchedEvent = cart.find((item) => item.name === currentEvent.name);
+
+        if (matchedEvent) {
+            let matchedEventIndex = cart.findIndex(
+                (item) => item.name === currentEvent.name
+            );
+
+            let totalTickets = matchedEvent.noOfTickets + noOfTickets;
+            const updatedObj = {
+                ...currentEvent,
+                noOfTickets: totalTickets,
+                totalPrice: totalPrice,
+            };
+            // ÄR DETTA RÄTT SÄTT ATT MANIPULERA LISTA? HUR GÖR VI ANNARS?
+            // ÄR DETTA RÄTT SÄTT ATT MANIPULERA LISTA? HUR GÖR VI ANNARS?
+            // ÄR DETTA RÄTT SÄTT ATT MANIPULERA LISTA? HUR GÖR VI ANNARS?
+            // ÄR DETTA RÄTT SÄTT ATT MANIPULERA LISTA? HUR GÖR VI ANNARS?
+            // ÄR DETTA RÄTT SÄTT ATT MANIPULERA LISTA? HUR GÖR VI ANNARS?
+            // ÄR DETTA RÄTT SÄTT ATT MANIPULERA LISTA? HUR GÖR VI ANNARS?
+            let cartCopy = cart;
+            cartCopy[matchedEventIndex] = updatedObj;
+            setCart(cartCopy);
+        } else {
+            const orderObj = {
+                ...currentEvent,
+                noOfTickets: noOfTickets,
+                totalPrice: totalPrice,
+            };
+
+            setCart([...cart, orderObj]);
+        }
     };
 
     return (

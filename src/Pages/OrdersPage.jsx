@@ -19,7 +19,7 @@ function OrdersPage() {
                     <OrderItem
                         setTotalCartPrice={setTotalCartPrice}
                         currentEvent={item}
-                        key={item.name + i}
+                        key={item.name}
                         index={i}
                     />
                 ))}
