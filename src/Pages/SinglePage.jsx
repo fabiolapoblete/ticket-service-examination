@@ -34,7 +34,7 @@ function SinglePage() {
 
     return (
         <article className="SinglePage__container">
-            {/* <HeaderNav /> */}
+            <HeaderNav />
             <section className="event-info--container">
                 <PageTitle title="Event" />
                 <p className="event-info--quote">

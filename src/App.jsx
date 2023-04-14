@@ -39,6 +39,7 @@ function App() {
   return (
       <dataContext.Provider value={[event, setCart, cart]}>
         <Router>
+        <div className="wrapper-container">
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/events" element={<EventsPage />} />
@@ -48,8 +49,11 @@ function App() {
             <Route path="/error" element={<ErrorPage />} />
             <Route path="*" element={<Navigate to="/error" />} />
           </Routes>
+          </div>
+
         </Router>
       </dataContext.Provider>
+
   );
 }
 

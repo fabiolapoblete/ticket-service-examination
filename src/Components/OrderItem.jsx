@@ -39,7 +39,7 @@ function OrderItem({ currentEvent, index, setTotalCartPrice }) {
     return (
         <article className="OrderItem">
             <section className="OrderItem_header">
-                <h2>{name}</h2>
+                <h3>{name}</h3>
                 <p>
                     {when.date} kl {when.from} - {when.to}
                 </p>
