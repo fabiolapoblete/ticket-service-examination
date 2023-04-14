@@ -1,7 +1,7 @@
-import EventItem from "../Components/EventItem";
+import HeaderNav from "../Components/HeaderNav";
 import PageTitle from "../Components/PageTitle";
 import SearchBar from "../Components/SearchBar";
-import HeaderNav from "../Components/HeaderNav";
+import EventItem from "../Components/EventItem";
 import FooterNav from "../Components/FooterNav";
 import { useContext, useState } from "react";
 import { dataContext } from "../App";

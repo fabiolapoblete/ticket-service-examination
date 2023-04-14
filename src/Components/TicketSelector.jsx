@@ -23,12 +23,44 @@ function TicketSelector({ currentEvent }) {
 
     // Adds a new order object with additional fields to the Cart
     const addToCart = () => {
-        const orderObj = {
-            ...currentEvent,
-            noOfTickets: noOfTickets,
-            totalPrice: totalPrice,
-        };
-        setCart([...cart, orderObj]);
+        // Checks for a match by name and gets index
+        let matchedEventIndex = cart.findIndex(
+            (item) => item.name === currentEvent.name
+        );
+
+        if (matchedEventIndex !== -1) {
+            // Updates the number of tickets
+            let totalTickets =
+                cart[matchedEventIndex].noOfTickets + noOfTickets;
+
+            // Creates new object to replace in cart
+            const updatedObj = {
+                ...currentEvent,
+                noOfTickets: totalTickets,
+                totalPrice: totalPrice,
+            };
+
+            // ÄR DETTA RÄTT SÄTT ATT MANIPULERA LISTA? HUR GÖR VI ANNARS?
+            // ÄR DETTA RÄTT SÄTT ATT MANIPULERA LISTA? HUR GÖR VI ANNARS?
+            // ÄR DETTA RÄTT SÄTT ATT MANIPULERA LISTA? HUR GÖR VI ANNARS?
+            // ÄR DETTA RÄTT SÄTT ATT MANIPULERA LISTA? HUR GÖR VI ANNARS?
+            // ÄR DETTA RÄTT SÄTT ATT MANIPULERA LISTA? HUR GÖR VI ANNARS?
+            // ÄR DETTA RÄTT SÄTT ATT MANIPULERA LISTA? HUR GÖR VI ANNARS?
+
+            // Replace old object with updated object
+            let cartCopy = cart;
+            cartCopy[matchedEventIndex] = updatedObj;
+            setCart(cartCopy);
+        } else {
+            // Adds a new object to the cart
+            const orderObj = {
+                ...currentEvent,
+                noOfTickets: noOfTickets,
+                totalPrice: totalPrice,
+            };
+
+            setCart([...cart, orderObj]);
+        }
     };
 
     return (

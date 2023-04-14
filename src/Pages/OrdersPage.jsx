@@ -5,7 +5,7 @@ import OrderPageTotalPrice from "../Components/OrderPageTotalPrice";
 import PrimaryButton from "../Components/PrimaryButton";
 import { useContext, useState } from "react";
 import { dataContext } from "../App";
-import HeaderNav from "../Components/HeaderNav";
+import { Link } from "react-router-dom";
 
 function OrdersPage() {
     const [event, setCart, cart] = useContext(dataContext);
@@ -22,12 +22,14 @@ function OrdersPage() {
                     <OrderItem
                         setTotalCartPrice={setTotalCartPrice}
                         currentEvent={item}
-                        key={item.name + i}
+                        key={item.name + i * 5}
                         index={i}
                     />
                 ))}
             <OrderPageTotalPrice totalCartPrice={totalCartPrice} />
-            <PrimaryButton title="Skicka order" />
+            <Link to="/tickets">
+                <PrimaryButton title="Skicka order" />
+            </Link>
         </section>
         </>
 

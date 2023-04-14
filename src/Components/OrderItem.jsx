@@ -5,7 +5,6 @@ import { dataContext } from "../App";
 function OrderItem({ currentEvent, index, setTotalCartPrice }) {
     const [event, setCart, cart] = useContext(dataContext);
     const [totalTickets, setTotalTickets] = useState(currentEvent.noOfTickets);
-
     const { name, when } = currentEvent;
     const { date, from, to } = when;
     let cartCopy = cart; // Copy of cart array to manipulate event directly at event index
@@ -41,7 +40,7 @@ function OrderItem({ currentEvent, index, setTotalCartPrice }) {
             <section className="OrderItem_header">
                 <h3>{name}</h3>
                 <p>
-                    {when.date} kl {when.from} - {when.to}
+                    {date} kl {from} - {to}
                 </p>
             </section>
             <ul className="OrderItem_quantity">
