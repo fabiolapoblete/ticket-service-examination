@@ -4,7 +4,6 @@ import TicketSelector from "../Components/TicketSelector";
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { dataContext } from "../App";
-import { useContext, useEffect, useState } from "react";
 import HeaderNav from "../Components/HeaderNav";
 
 function SinglePage() {

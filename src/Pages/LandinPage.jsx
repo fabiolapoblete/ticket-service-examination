@@ -1,8 +1,15 @@
 import "../Styles/LandingPage.css";
 import PrimaryButton from "../Components/PrimaryButton";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function LandingPage() {
+
+  const navigate = useNavigate()
+
+  function handleClick() {
+      navigate('/events')
+  }
+
   return (
     <article className="wrapper">
       <section className="landingPage">
@@ -14,9 +21,7 @@ function LandingPage() {
         <h1 className="landingPage__header">Where it's @</h1>
         <h2 className="landingPage__sub-header">Ticketing made easy</h2>
         <section className="landingPage__btn">
-        <Link to="/events">
-          <PrimaryButton title="Continue" />
-        </Link>
+          <PrimaryButton action={handleClick} title="Continue" />
         </section>
 
       </section>

@@ -5,11 +5,18 @@ import OrderPageTotalPrice from "../Components/OrderPageTotalPrice";
 import PrimaryButton from "../Components/PrimaryButton";
 import { useContext, useState } from "react";
 import { dataContext } from "../App";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import HeaderNav from "../Components/HeaderNav";
+import FooterNav from "../Components/FooterNav";
 
 function OrdersPage() {
     const [event, setCart, cart] = useContext(dataContext);
     const [totalCartPrice, setTotalCartPrice] = useState(0);
+    const navigate = useNavigate()
+
+    function handleClick() {
+        navigate('/tickets')
+    }
 
     return (
         <>
@@ -27,10 +34,10 @@ function OrdersPage() {
                     />
                 ))}
             <OrderPageTotalPrice totalCartPrice={totalCartPrice} />
-            <Link to="/tickets">
-                <PrimaryButton title="Skicka order" />
-            </Link>
+                <PrimaryButton action={handleClick} title="Skicka order" />
+       
         </section>
+        <FooterNav />
         </>
 
     );

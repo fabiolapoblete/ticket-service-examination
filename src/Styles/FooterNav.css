@@ -4,13 +4,21 @@
     gap: 0.5rem;
 }
 
-.navButton {
+.active {
+    background-color: var(--main-text-color);
+}
+
+a {
     background-color: var(--third-text-color);
     width: 1rem;
     height: 1rem;
     padding: 0;
     border-radius: 50%;
     border: none;
+    text-decoration: none;
+}
+.navButton {
+    display: none;
 }
 
 .footerNav__wrapper {

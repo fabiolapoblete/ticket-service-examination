@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
+    margin-bottom: 2rem;
 }
 
 .ticket__container h1 {
@@ -13,6 +14,8 @@
     font-weight: 900;
     font-style: italic;
     margin-bottom: 2rem;
+    padding: 0 1rem;
+
 }
 
 .ticket__artist {
@@ -67,6 +70,11 @@
     background-color: rgba(0, 0, 0, 0.06);
     font-size: 0.8rem;
     color: rgba(0, 0, 0, 0.8);
+    padding-bottom: 0.5rem;
+}
+
+.ticket__info p {
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .ticket__barcode {
@@ -90,4 +98,5 @@
     font-weight: 800;
     font-size: 0.7rem;
     text-transform: uppercase;
+    margin: 0.5rem 0;    
 }
