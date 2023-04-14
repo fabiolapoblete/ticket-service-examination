@@ -1,6 +1,7 @@
 import PrimaryButton from "./PrimaryButton";
 import { useEffect, useState, useContext } from "react";
 import { dataContext } from "../App";
+import "../Styles/TicketSelector.css"
 
 function TicketSelector({ currentEvent }) {
     const [event, setCart, cart] = useContext(dataContext);
@@ -31,6 +32,7 @@ function TicketSelector({ currentEvent }) {
     };
 
     return (
+        <article>
         <section className="event-info--ticket-selector">
             <h3 className="event-info-price">{totalPrice}</h3>
             <section className="event-info--choser">
@@ -42,8 +44,10 @@ function TicketSelector({ currentEvent }) {
                     +
                 </button>
             </section>
-            <PrimaryButton action={addToCart} title="Lägg i varukorgen" />
         </section>
+        <PrimaryButton action={addToCart} title="Lägg i varukorgen" />
+        </article>
+
     );
 }
 

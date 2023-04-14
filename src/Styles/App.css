@@ -17,6 +17,10 @@ body {
 h1 {
   font-size: 32px;
   font-family: var(--header-font);
-  font-weight: 400;
   color: var(--main-text-color);
+}
+
+.pageTitle__header {
+  display: flex;
+  justify-content: center;
 }

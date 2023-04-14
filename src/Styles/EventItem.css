@@ -1,65 +1,76 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Sansita&display=swap%27");
 
-:root {
-    --background-color: #231f42;
-    --main-text-color: #f56b9a;
-    --secondary-text-color: #37aeab;
-
-    --header-font: "Sansita";
-    --main-font: "Fira sans";
-}
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.event__item {
-    width: 100%;
+.event__item--wrapper {
     display: flex;
+    justify-content: center;
+}
+
+
+.event__item {
     gap: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.event__item h2 {
+.event__item h2, p {
     font-family: var(--main-font);
-}
-
-.event__item p {
-    font-family: var(--main-font);
+    color: var(--third-text-color);
 }
 
 .event__item--date {
     display: flex;
-    background-color: var(--background-color);
-    align-items: center;
-    justify-content: center;
+    margin: 0.5rem;
+    border: 1px solid var(--third-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
 }
 
 .event__item--date p {
-    padding: 1.5rem;
-    text-align: center;
+    padding: 1rem;
+}
+
+.event__item--artist {
+    font-size: 22px;
+    line-height: 26px;
 }
 
 .event__item--info {
     display: flex;
     flex-direction: column;
-    background-color: var(--background-color);
-    text-align: start;
-    position: relative;
+    align-items: flex-start;
 }
 
 .event__item--location {
-    font-size: 0.9rem;
-    font-style: oblique;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
 }
+
+.event__item--timePrice-wrapper {
+    display: flex;
+    gap: 3.1rem;
+}
+
 
 .event__item--time {
-    margin-top: auto;
+    font-size: 14px;
+    line-height: 17px;
+} 
+.event__item--price {
+    color: var(--secondary-text-color);
+    font-size: 17px;
+    line-height: 20px;
 }
-
-.event__item--info .event__item--price {
-    background-color: var(--main-text-color);
-    position: absolute;
-    right: 0;
-    bottom: 0;
+.event__item--underscore {
+    border-bottom: 1px solid white;
+    width: 12rem;
 }

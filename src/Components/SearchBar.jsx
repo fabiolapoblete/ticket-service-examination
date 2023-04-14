@@ -17,7 +17,7 @@ function SearchBar({ setFilteredEvents }) {
     };
 
     return (
-        <form>
+        <form className="searchBar__wrapper">
             <input
                 className="searchBar"
                 type="search"

@@ -2,7 +2,7 @@ import "../Styles/App.css";
 
 function PageTitle({ title }) {
     return (
-        <header>
+        <header className="pageTitle__header">
             <h1>{title}</h1>
         </header>
     );

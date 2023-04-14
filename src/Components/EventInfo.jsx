@@ -4,16 +4,13 @@ function EventInfo({ event }) {
     const { name, where, when } = event;
 
     return (
-        <>
-            <section>
+            <section className="event-info--wrapper">
                 <h2 className="event-info--name">{name}</h2>
                 <p className="event-info--date">
-                    {when.date}
-                    {when.from} - {when.to}
+                    {when.date} {when.from} - {when.to}
                 </p>
                 <span className="event-info--location">{where}</span>
             </section>
-        </>
     );
 }
 

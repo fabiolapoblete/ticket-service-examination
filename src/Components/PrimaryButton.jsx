@@ -1,4 +1,4 @@
-import "../Styles/App.css";
+import "../Styles/PrimaryButton.css"
 
 function PrimaryButton({ title, action }) {
     return (

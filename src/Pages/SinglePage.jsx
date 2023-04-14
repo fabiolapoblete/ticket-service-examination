@@ -5,6 +5,7 @@ import PageTitle from "../Components/PageTitle";
 import { useParams } from "react-router-dom";
 import { dataContext } from "../App";
 import { useContext, useEffect, useState } from "react";
+import HeaderNav from "../Components/HeaderNav";
 
 function SinglePage() {
     const defaultObj = {
@@ -32,8 +33,9 @@ function SinglePage() {
     }, []);
 
     return (
-        <>
-            <article className="event-info--container">
+        <article className="SinglePage__container">
+            {/* <HeaderNav /> */}
+            <section className="event-info--container">
                 <PageTitle title="Event" />
                 <p className="event-info--quote">
                     You are about to score some tickets to
@@ -43,8 +45,8 @@ function SinglePage() {
                     currentEvent={currentEvent}
                     price={currentEvent.price}
                 />
-            </article>
-        </>
+            </section>
+        </article>
     );
 }
 
