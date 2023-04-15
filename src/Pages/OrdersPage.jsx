@@ -8,37 +8,42 @@ import { dataContext } from "../App";
 import { Link, useNavigate } from "react-router-dom";
 import HeaderNav from "../Components/HeaderNav";
 import FooterNav from "../Components/FooterNav";
+import { motion } from "framer-motion";
 
 function OrdersPage() {
-  const [event, setCart, cart] = useContext(dataContext);
-  const [totalCartPrice, setTotalCartPrice] = useState(0);
-  const navigate = useNavigate();
+    const [event, setCart, cart] = useContext(dataContext);
+    const [totalCartPrice, setTotalCartPrice] = useState(0);
+    const navigate = useNavigate();
 
-  function handleClick() {
-    navigate("/tickets");
-  }
+    function handleClick() {
+        navigate("/tickets");
+    }
 
-  return (
-    <>
-      <HeaderNav to="/events" />
-      <section className="Orders__Page">
-        <PageTitle title="Order" />
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 30 }}
+        >
+            <HeaderNav to="/events" />
+            <section className="Orders__Page">
+                <PageTitle title="Order" />
 
-        {cart &&
-          cart.map((item, i) => (
-            <OrderItem
-              setTotalCartPrice={setTotalCartPrice}
-              currentEvent={item}
-              key={item.name + i * 5}
-              index={i}
-            />
-          ))}
-        <OrderPageTotalPrice totalCartPrice={totalCartPrice} />
-        <PrimaryButton action={handleClick} title="Skicka order" />
-      </section>
-      <FooterNav />
-    </>
-  );
+                {cart &&
+                    cart.map((item, i) => (
+                        <OrderItem
+                            setTotalCartPrice={setTotalCartPrice}
+                            currentEvent={item}
+                            key={item.name + i * 5}
+                            index={i}
+                        />
+                    ))}
+                <OrderPageTotalPrice totalCartPrice={totalCartPrice} />
+                <PrimaryButton action={handleClick} title="Skicka order" />
+            </section>
+            <FooterNav />
+        </motion.div>
+    );
 }
 
 export default OrdersPage;
