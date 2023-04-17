@@ -5,7 +5,7 @@ import { dataContext } from "../App";
 import PageTitle from "../Components/PageTitle";
 import { motion } from "framer-motion";
 import TicketSlider from "../Components/TicketSlider";
-import FooterNav from "../Components/FooterNav";
+import HeaderNav from "../Components/HeaderNav";
 
 function TicketsPage() {
     const [event, setCart, cart] = useContext(dataContext);
@@ -19,15 +19,16 @@ function TicketsPage() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 30 }}
         >
+            <HeaderNav />
             <PageTitle title={"Tickets"} />
             {cart &&
                 cart.map((item, i) => {
                     return (
                         <>
-                            <h3 className="ticketSlider__header">
+                            <h3 key={i + 55} className="ticketSlider__header">
                                 {item.name} tickets - {item.noOfTickets} st
                             </h3>
-                            <section key={i} className="ticketsWrapper">
+                            <section key={i + 33} className="ticketsWrapper">
                                 <TicketSlider key={i} event={item} />;
                             </section>
                         </>
