@@ -1,6 +1,6 @@
-import "../Styles/OrderItem.css";
 import { useEffect, useState, useContext } from "react";
 import { dataContext } from "../App";
+import "../Styles/OrderItem.css";
 
 function OrderItem({ currentEvent, index, setTotalCartPrice }) {
     const [event, setCart, cart] = useContext(dataContext);
@@ -36,21 +36,21 @@ function OrderItem({ currentEvent, index, setTotalCartPrice }) {
     }, [totalTickets]);
 
     return (
-        <article className="OrderItem">
-            <section className="OrderItem_header">
+        <article className="orderItem">
+            <section className="orderItem_header">
                 <h3>{name}</h3>
                 <p>
                     {date} kl {from} - {to}
                 </p>
             </section>
-            <ul className="OrderItem_quantity">
-                <button onClick={decrement} className="OrderItem_quantity-btn">
+            <ul className="orderItem_quantity">
+                <button onClick={decrement} className="orderItem_quantity-btn">
                     -
                 </button>
-                <button className="OrderItem_quantity-quantity">
+                <button className="orderItem_quantity-quantity">
                     {currentEvent.noOfTickets}
                 </button>
-                <button onClick={increment} className="OrderItem_quantity-btn">
+                <button onClick={increment} className="orderItem_quantity-btn">
                     +
                 </button>
             </ul>

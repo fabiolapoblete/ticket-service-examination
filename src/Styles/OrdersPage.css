@@ -1,4 +1,4 @@
-.Orders__Page {
+.orders__Page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,24 +6,24 @@
     font-family: var(--main-font);
 }
 
-.Orders__Page .noOrder {
+.orders__Page .noOrder {
     color: white;
     margin-top: 3rem;
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-style: italic;
 }
-.OrderPage__total_price {
+.orderPage__total_price {
     text-align: center;
     width: 100%;
     margin-top: auto;
 }
-.OrderPage__total_price p {
+.orderPage__total_price p {
     color: var(--third-text-color);
     font-size: 1.2rem;
 }
 
-.OrderPage__total_price h1 {
+.orderPage__total_price h1 {
     color: #fff;
     font-size: 2rem;
     font-weight: bold;
@@ -31,6 +31,6 @@
     text-shadow: 1px 2px 2px #f00;
 }
 
-.OrderPage__total_price > button {
+.orderPage__total_price > button {
     width: 100%;
 }

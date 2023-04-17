@@ -1,6 +1,6 @@
-import "../Styles/searchBar.css";
 import { useContext } from "react";
 import { dataContext } from "../App";
+import "../Styles/SearchBar.css";
 
 function SearchBar({ setFilteredEvents }) {
     const [events] = useContext(dataContext);

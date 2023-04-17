@@ -13,12 +13,9 @@
 }
 
 .event-info--quote {
-    /* font-family: var(--main-font); */
-    /* color: var(--third-text-color); */
+    font-size: 1.1rem;
     font-style: italic;
     font-weight: 400;
-    font-size: 19px;
-    /* line-height: 23px; */
     margin: 1.5rem;
     text-align: center;
 }
@@ -33,7 +30,6 @@
 }
 
 .event-info--date {
-    /* font-family: var(--main-font); */
     font-weight: 700;
     color: #37aeab;
     font-weight: 700;
@@ -42,7 +38,6 @@
 }
 
 .event-info--location {
-    /* color: var(--third-text-color); */
     font-style: italic;
     font-weight: 400;
     font-size: 16px;
@@ -86,20 +81,7 @@
     line-height: 39px;
     padding: 0.5rem 1.5rem;
     border: 1px solid #f56b9a;
-    /*Vi behöver fixa border här*/
     border-right: 0px;
     border-left: 0px;
     border-bottom: 0px;
-    /**/
 }
-
-/* .event-info--primary-button {
-    background-color: #37AEAB;
-    color: var(--third-text-color);
-    margin: 1rem;
-    border: none;
-    padding: 1rem 0.5rem;
-    font-size: 22px;
-    line-height: 26px;
-    justify-self: flex-end;
-} */

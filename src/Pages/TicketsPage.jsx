@@ -1,17 +1,12 @@
-import TicketItem from "../Components/TicketItem";
-import "../Styles/TicketsPage.css";
+import TicketSlider from "../Components/TicketSlider";
+import PageTitle from "../Components/PageTitle";
 import { useContext } from "react";
 import { dataContext } from "../App";
-import PageTitle from "../Components/PageTitle";
 import { motion } from "framer-motion";
-import TicketSlider from "../Components/TicketSlider";
-import HeaderNav from "../Components/HeaderNav";
+import "../Styles/TicketsPage.css";
 
 function TicketsPage() {
     const [event, setCart, cart] = useContext(dataContext);
-    // Loop each cart item
-
-    console.log(cart);
 
     return (
         <motion.div

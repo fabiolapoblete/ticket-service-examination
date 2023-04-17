@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import "../Styles/EventItem.css";
 import { motion } from "framer-motion";
+import "../Styles/EventItem.css";
 
 function EventItem({ event, variants, custom, initial, animate }) {
     const { name, price, where, when } = event;

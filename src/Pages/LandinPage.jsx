@@ -1,15 +1,15 @@
-import "../Styles/LandingPage.css";
 import PrimaryButton from "../Components/PrimaryButton";
-import { useNavigate } from "react-router-dom";
 import PageTitle from "../Components/PageTitle";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import "../Styles/LandingPage.css";
 
 function LandingPage() {
     const navigate = useNavigate();
 
-    function handleClick() {
+    const handleClick = () => {
         navigate("/events");
-    }
+    };
 
     return (
         <motion.article

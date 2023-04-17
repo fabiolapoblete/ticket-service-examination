@@ -1,8 +1,8 @@
 import PrimaryButton from "./PrimaryButton";
 import { useEffect, useState, useContext } from "react";
 import { dataContext } from "../App";
+import { motion } from "framer-motion";
 import "../Styles/TicketSelector.css";
-import { animate, motion } from "framer-motion";
 
 function TicketSelector({ currentEvent }) {
     const [event, setCart, cart] = useContext(dataContext);
@@ -18,12 +18,6 @@ function TicketSelector({ currentEvent }) {
     const increment = () => {
         setNoOfTickets(noOfTickets + 1);
         setPopEffect(true);
-    };
-
-    const scaleUpDown = () => {
-        visible: {
-            scale: [1.2, 1];
-        }
     };
 
     // Calculates the total price each change of tickets
@@ -77,10 +71,7 @@ function TicketSelector({ currentEvent }) {
                     >
                         -
                     </button>
-                    <motion.h4
-                        variants={scaleUpDown}
-                        animate={popEffect ? "visible" : ""}
-                    >
+                    <motion.h4 animate={popEffect ? "visible" : ""}>
                         {noOfTickets}
                     </motion.h4>
                     <motion.button

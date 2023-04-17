@@ -5,6 +5,7 @@ import TicketsPage from "../Pages/TicketsPage";
 import SinglePage from "../Pages/SinglePage";
 import ErrorPage from "../Pages/ErrorPage";
 import HeaderNav from "./HeaderNav";
+import FooterNav from "./FooterNav";
 import { AnimatePresence } from "framer-motion";
 import {
     BrowserRouter as Router,
@@ -13,7 +14,7 @@ import {
     Navigate,
     useLocation,
 } from "react-router-dom";
-import FooterNav from "./FooterNav";
+
 function AnimatedRoutes() {
     const location = useLocation();
 

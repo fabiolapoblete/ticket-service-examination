@@ -1,14 +1,15 @@
-import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import "../Styles/headerNav.css";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { dataContext } from "../App";
-import { useContext, useEffect, useState } from "react";
+import "../Styles/HeaderNav.css";
 
 function HeaderNav() {
     const [event, setCart, cart] = useContext(dataContext);
     const [cartCount, setCartCount] = useState(cart.length);
     const navigate = useNavigate();
     const path = useLocation();
+
     const cartStyle = {
         display:
             path.pathname === "/orders" || path.pathname === "/tickets"
@@ -20,26 +21,22 @@ function HeaderNav() {
         visibility: path.pathname === "/events" ? "hidden" : "visible",
     };
 
-    console.log(path, "Path here");
     useEffect(() => {
         setCartCount(cart.length);
     }, [cart]);
 
-    useEffect(() => {}, [cartCount]);
-
-    function navBack() {
-        console.log("handleClick called");
+    const navBack = () => {
         if (path.pathname === "/tickets") {
             navigate("/events");
             setCart([]);
         } else {
             navigate(-1);
         }
-    }
+    };
 
-    function navToCart() {
+    const navToCart = () => {
         navigate("/orders");
-    }
+    };
 
     return (
         <nav

@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Sansita&display=swap%27");
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 a {
     text-decoration: none;
 }
@@ -25,16 +19,10 @@ a {
     gap: 1rem;
 }
 
-/* .event__item h2, p {
-    font-family: var(--main-font);
-    color: var(--third-text-color);
-} */
-
 .event__item--date {
     display: flex;
     font-weight: 700;
     font-size: 0.9rem;
-    /* line-height: 17px; */
     border: 1px solid var(--third-text-color);
     border-radius: 5px;
     padding: 1rem;
@@ -45,13 +33,6 @@ a {
     word-spacing: 62.5rem;
 }
 
-/* .event__item--date p {
-    display: block;
-    width: 100%;
-    text-align: center;
-    word-spacing: 1000px;
-} */
-
 .event__item--info {
     width: 100%;
     display: flex;
@@ -61,15 +42,13 @@ a {
 
 .event__item--artist {
     font-size: 1.4rem;
-    text-shadow: 1px 1px #F56B9A;
-    /* line-height: 26px; */
+    text-shadow: 1px 1px #f56b9a;
 }
 
 .event__item--location {
     font-style: italic;
     font-weight: 400;
     font-size: 0.8rem;
-    /* line-height: 14px; */
 }
 
 .event__item--timePrice-wrapper {
@@ -79,8 +58,7 @@ a {
 
 .event__item--time {
     font-size: 0.9rem;
-    /* line-height: 17px; */
-} 
+}
 .event__item--price {
     color: var(--secondary-text-color);
     font-size: 1.1rem;
