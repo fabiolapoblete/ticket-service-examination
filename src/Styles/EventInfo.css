@@ -1,4 +1,3 @@
-
 .event-info--container {
     display: flex;
     flex-direction: column;
@@ -36,7 +35,7 @@
 .event-info--date {
     /* font-family: var(--main-font); */
     font-weight: 700;
-    color: #37AEAB;
+    color: #37aeab;
     font-weight: 700;
     font-size: 19px;
     line-height: 23px;
@@ -61,38 +60,38 @@
 
 .event-info--choser {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     align-items: center;
     padding: 1rem 0rem 0rem;
 }
 
 .event-info--choser h4 {
+    flex: 1;
+    text-align: center;
     font-size: 28px;
     line-height: 39px;
-    /* font-family: var(--main-font); */
     padding: 0.5rem 2rem;
-    /*Fixa till border här*/
-    border-top: 1px solid #F56B9A;
-    border-right: 1px solid #F56B9A;
-    border-left: 1px solid #F56B9A;
-    
+    border-top: 1px solid #f56b9a;
+    border-right: 1px solid #f56b9a;
+    border-left: 1px solid #f56b9a;
 }
 
 .event-info--choser-btn {
-    display: flex;
-    align-items: flex-end;
+    align-items: center;
+    text-align: center;
     background-color: transparent;
     color: var(--third-text-color);
     font-size: 28px;
     line-height: 39px;
     padding: 0.5rem 1.5rem;
-    border: 1px solid #F56B9A;
+    border: 1px solid #f56b9a;
     /*Vi behöver fixa border här*/
     border-right: 0px;
     border-left: 0px;
     border-bottom: 0px;
     /**/
 }
-
 
 /* .event-info--primary-button {
     background-color: #37AEAB;

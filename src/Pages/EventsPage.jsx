@@ -30,7 +30,6 @@ function EventsPage() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 30 }}
         >
-            <HeaderNav to="/" />
             <PageTitle title="Events" />
             <main>
                 <SearchBar setFilteredEvents={setFilteredEvents} />
@@ -46,7 +45,6 @@ function EventsPage() {
                         />
                     ))}
             </main>
-            <FooterNav />
         </motion.div>
     );
 }

@@ -1,18 +1,17 @@
 .navbar {
     background-color: var(--background-color);
-    color: var(--third-text-color);
+    padding: 1rem 1rem 0.5rem 1rem;
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--third-text-color);
     justify-content: space-between;
-    margin: 0.5rem 0;
-    position: relative;
+    width: 100%;
 }
 
 .navbar a {
     background-color: var(--background-color);
-}
-
-.navbar a:hover {
-    transform: scale(1.1);
 }
 
 .order-count {
@@ -30,6 +29,7 @@
 }
 
 .order-count__number {
-    font-weight: 800;
+    font-family: var(--main-font);
+    font-weight: 600;
     color: white;
 }

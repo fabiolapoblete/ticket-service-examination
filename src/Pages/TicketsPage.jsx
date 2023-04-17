@@ -19,19 +19,18 @@ function TicketsPage() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 30 }}
         >
-            <HeaderNav />
             <PageTitle title={"Tickets"} />
             {cart &&
                 cart.map((item, i) => {
                     return (
-                        <>
-                            <h3 key={i + 55} className="ticketSlider__header">
+                        <article key={i}>
+                            <h3 className="ticketSlider__header">
                                 {item.name} tickets - {item.noOfTickets} st
                             </h3>
-                            <section key={i + 33} className="ticketsWrapper">
-                                <TicketSlider key={i} event={item} />;
+                            <section className="ticketsWrapper">
+                                <TicketSlider event={item} />;
                             </section>
-                        </>
+                        </article>
                     );
                 })}
         </motion.div>

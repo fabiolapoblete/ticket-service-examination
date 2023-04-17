@@ -27,23 +27,34 @@ function OrdersPage() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 30 }}
         >
-            <HeaderNav />
             <section className="Orders__Page">
                 <PageTitle title="Order" />
-
-                {cart &&
-                    cart.map((item, i) => (
-                        <OrderItem
-                            setTotalCartPrice={setTotalCartPrice}
-                            currentEvent={item}
-                            key={item.name + i * 5}
-                            index={i}
+                {cart.length > 0 ? (
+                    <>
+                        {cart.map((item, i) => (
+                            <OrderItem
+                                setTotalCartPrice={setTotalCartPrice}
+                                currentEvent={item}
+                                key={item.name + i * 5}
+                                index={i}
+                            />
+                        ))}
+                        <OrderPageTotalPrice totalCartPrice={totalCartPrice} />
+                        <PrimaryButton
+                            action={handleClick}
+                            title="Skicka order"
                         />
-                    ))}
-                <OrderPageTotalPrice totalCartPrice={totalCartPrice} />
-                <PrimaryButton action={handleClick} title="Skicka order" />
+                    </>
+                ) : (
+                    <>
+                        <p className="noOrder">Din varukorg är tom</p>
+                        <PrimaryButton
+                            action={() => navigate("/events")}
+                            title="Till Events"
+                        />
+                    </>
+                )}
             </section>
-            <FooterNav />
         </motion.div>
     );
 }

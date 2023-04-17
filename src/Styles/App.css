@@ -1,44 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Sansita&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Sansita&display=swap%27");
 
 :root {
-  --background-color: #231F42;
-  --main-text-color: #F56B9A;
-  --secondary-text-color: #37AEAB;
-  --third-text-color: #FFFFFFCC;
+    --background-color: #231f42;
+    --main-text-color: #f56b9a;
+    --secondary-text-color: #37aeab;
+    --third-text-color: #ffffffcc;
 
-  --header-font: 'Sansita';
-  --main-font: 'Fira sans';
+    --header-font: "Sansita";
+    --main-font: "Fira sans";
 }
 
 body {
-  background-color: var(--background-color);
-
+    background-color: var(--background-color);
 }
 
 .wrapper-container {
-  padding: 1rem;
+    position: relative;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
 }
 
 h1 {
-  font-size: 2rem;
-  font-family: var(--header-font);
-  color: var(--main-text-color);
+    font-size: 2rem;
+    font-family: var(--header-font);
+    color: var(--main-text-color);
 }
 
 h3 {
-  color: #F56B9A;
-  font-family: var(--header-font);
-  font-weight: 800;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+    color: #f56b9a;
+    font-family: var(--header-font);
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .pageTitle__header {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
-

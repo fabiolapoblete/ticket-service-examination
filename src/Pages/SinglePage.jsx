@@ -39,7 +39,6 @@ function SinglePage() {
             exit={{ opacity: 0, y: 30 }}
             className="SinglePage__container"
         >
-            <HeaderNav to="/events" />
             <section className="event-info--container">
                 <PageTitle title="Event" />
                 <p className="event-info--quote">

@@ -13,14 +13,13 @@ import {
     Navigate,
     useLocation,
 } from "react-router-dom";
-
+import FooterNav from "./FooterNav";
 function AnimatedRoutes() {
     const location = useLocation();
 
     return (
         <>
-            {/* <HeaderNav to="/" /> */}
-
+            <HeaderNav />
             <AnimatePresence
                 onExitComplete={() => window.scrollTo(0, 0)}
                 mode="wait"
@@ -35,6 +34,7 @@ function AnimatedRoutes() {
                     <Route path="*" element={<Navigate to="/error" />} />
                 </Routes>
             </AnimatePresence>
+            <FooterNav />
         </>
     );
 }

@@ -27,7 +27,7 @@ function HeaderNav() {
 
     useEffect(() => {}, [cartCount]);
 
-    function handleClick() {
+    function navBack() {
         console.log("handleClick called");
         if (path.pathname === "/tickets") {
             navigate("/events");
@@ -37,44 +37,50 @@ function HeaderNav() {
         }
     }
 
+    function navToCart() {
+        navigate("/orders");
+    }
+
     return (
-        <nav className="navbar">
+        <nav
+            style={{ display: path.pathname === "/" ? "none" : "flex" }}
+            className="navbar"
+        >
             <img
                 style={backBtnStyle}
-                onClick={handleClick}
+                onClick={navBack}
                 src="/src/assets/arrow_back.svg"
                 alt="arrow back"
             />
-            <NavLink to="/orders">
-                <AnimatePresence initial={false}>
-                    {cartCount > 0 && (
-                        <motion.div
-                            initial={{ scale: 0, y: 20 }}
-                            animate={{ scale: 1, y: 0 }}
-                            transition={{
-                                type: "spring",
-                                duration: 0.6,
-                            }}
-                            exit={{
-                                scale: 0,
-                                transition: { type: "tween", duration: 0.15 },
-                            }}
-                            key="counter"
-                            className="order-count"
-                            style={cartStyle}
-                        >
-                            <motion.p className="order-count__number">
-                                {cartCount}
-                            </motion.p>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-                <img
-                    style={cartStyle}
-                    src="/src/assets/shopping_cart2.svg"
-                    alt="shopping cart"
-                />
-            </NavLink>
+            <AnimatePresence initial={false}>
+                {cartCount > 0 && (
+                    <motion.div
+                        initial={{ scale: 0, y: 20 }}
+                        animate={{ scale: 1, y: 0 }}
+                        transition={{
+                            type: "spring",
+                            duration: 0.6,
+                        }}
+                        exit={{
+                            scale: 0,
+                            transition: { type: "tween", duration: 0.15 },
+                        }}
+                        key="counter"
+                        className="order-count"
+                        style={cartStyle}
+                    >
+                        <motion.p className="order-count__number">
+                            {cartCount}
+                        </motion.p>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+            <img
+                style={cartStyle}
+                onClick={navToCart}
+                src="/src/assets/shopping_cart2.svg"
+                alt="shopping cart"
+            />
         </nav>
     );
 }
