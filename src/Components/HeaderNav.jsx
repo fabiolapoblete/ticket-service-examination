@@ -65,6 +65,7 @@ function HeaderNav() {
                         key="counter"
                         className="order-count"
                         style={cartStyle}
+                        onClick={navToCart}
                     >
                         <motion.p className="order-count__number">
                             {cartCount}
