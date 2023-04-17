@@ -4,6 +4,8 @@ import { useContext } from "react";
 import { dataContext } from "../App";
 import PageTitle from "../Components/PageTitle";
 import { motion } from "framer-motion";
+import TicketSlider from "../Components/TicketSlider";
+import FooterNav from "../Components/FooterNav";
 
 function TicketsPage() {
     const [event, setCart, cart] = useContext(dataContext);
@@ -19,10 +21,17 @@ function TicketsPage() {
         >
             <PageTitle title={"Tickets"} />
             {cart &&
-                cart.map((item) => {
-                    return Array.from({ length: item.noOfTickets }, (_, i) => (
-                        <TicketItem event={item} key={`${item.name}-${i}`} />
-                    ));
+                cart.map((item, i) => {
+                    return (
+                        <>
+                            <h3 className="ticketSlider__header">
+                                {item.name} tickets - {item.noOfTickets} st
+                            </h3>
+                            <section key={i} className="ticketsWrapper">
+                                <TicketSlider key={i} event={item} />;
+                            </section>
+                        </>
+                    );
                 })}
         </motion.div>
     );
