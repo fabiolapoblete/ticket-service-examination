@@ -7,7 +7,19 @@ import { useContext, useState } from "react";
 import { dataContext } from "../App";
 import { motion } from "framer-motion";
 
-const MotionEventItem = motion(EventItem);
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (index) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            ease: "easeInOut",
+            opacity: { duration: 0.6 },
+            // duration: 0.3,
+            // stiffness: 120,
+        },
+    }),
+};
 
 function EventsPage() {
     const [events] = useContext(dataContext);
@@ -24,7 +36,14 @@ function EventsPage() {
                 <SearchBar setFilteredEvents={setFilteredEvents} />
                 {filteredEvents &&
                     filteredEvents.map((event, i) => (
-                        <MotionEventItem key={i} event={event} />
+                        <EventItem
+                            variants={itemVariants}
+                            initial="hidden"
+                            animate="visible"
+                            custom={i}
+                            key={i}
+                            event={event}
+                        />
                     ))}
             </main>
             <FooterNav />

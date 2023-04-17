@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     margin: 0.5rem 0;
+    position: relative;
 }
 
 .navbar a {
@@ -11,5 +12,24 @@
 }
 
 .navbar a:hover {
-    transform: scale(1.1)
+    transform: scale(1.1);
+}
+
+.order-count {
+    background-color: var(--main-text-color);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    z-index: 1;
+}
+
+.order-count__number {
+    font-weight: 800;
+    color: white;
 }
