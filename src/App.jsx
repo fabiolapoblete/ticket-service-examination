@@ -36,6 +36,7 @@ function App() {
             <Router>
                 <div className="wrapper-container">
                     <AnimatedRoutes />
+                    {/* Created a component holding all Routes to be able to animate properly */}
                 </div>
             </Router>
         </dataContext.Provider>
