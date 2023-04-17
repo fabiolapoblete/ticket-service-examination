@@ -5,6 +5,7 @@ import "../Styles/SearchBar.css";
 function SearchBar({ setFilteredEvents }) {
     const [events] = useContext(dataContext);
 
+    // Filter events if event name includes search input
     const filterItems = (e) => {
         if (e.target.value === "") {
             setFilteredEvents(events);

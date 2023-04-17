@@ -25,7 +25,7 @@ function OrdersPage() {
         >
             <section className="orders__Page">
                 <PageTitle title="Order" />
-                {cart.length > 0 ? (
+                {cart.length > 0 ? ( // Renders items in cart based on cart length
                     <>
                         {cart.map((item, i) => (
                             <OrderItem
@@ -42,6 +42,7 @@ function OrdersPage() {
                         />
                     </>
                 ) : (
+                    // Renders empty cart UI
                     <>
                         <p className="noOrder">Din varukorg är tom</p>
                         <PrimaryButton

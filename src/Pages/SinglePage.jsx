@@ -7,6 +7,7 @@ import { dataContext } from "../App";
 import { motion } from "framer-motion";
 
 function SinglePage() {
+    // Create an initial object template
     const defaultObj = {
         name: "",
         price: "",
