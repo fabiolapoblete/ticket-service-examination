@@ -1,33 +1,33 @@
 .orders__Page {
+    font-family: var(--main-font);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    font-family: var(--main-font);
 }
 
 .orders__Page .noOrder {
-    color: white;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
     font-size: 1.5rem;
     font-style: italic;
+    color: white;
+    margin: 3rem 0 1rem 0;
 }
+
 .orderPage__total_price {
-    text-align: center;
     width: 100%;
+    text-align: center;
     margin-top: auto;
 }
 .orderPage__total_price p {
-    color: var(--third-text-color);
     font-size: 1.2rem;
+    color: var(--third-text-color);
 }
 
 .orderPage__total_price h1 {
-    color: #fff;
+    font-family: var(--main-font);
     font-size: 2rem;
     font-weight: bold;
-    font-family: var(--main-font);
+    color: white;
     text-shadow: 1px 2px 2px #f00;
 }
 

@@ -23,27 +23,25 @@ body {
 .wrapper-container {
     position: relative;
     padding: 1rem;
-    box-sizing: border-box;
-    margin-bottom: 4rem;
-    margin-top: 2rem;
+    margin: 2rem 0 4rem 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1 {
-    font-size: 2rem;
     font-family: var(--header-font);
+    font-size: 2rem;
     color: var(--main-text-color);
 }
 
 h3 {
-    color: #f56b9a;
     font-family: var(--header-font);
-    font-weight: 800;
     font-size: 1.5rem;
     line-height: 1.5rem;
-}
-
-button {
-    cursor: pointer;
+    font-weight: 800;
+    color: var(--main-text-color);
 }
 
 .pageTitle__header {

@@ -1,9 +1,9 @@
 .event-info--container {
+    font-family: var(--main-font);
+    color: var(--third-text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: var(--main-font);
-    color: var(--third-text-color);
 }
 
 .event-info--wrapper {
@@ -16,72 +16,67 @@
     font-size: 1.1rem;
     font-style: italic;
     font-weight: 400;
-    margin: 1.5rem;
     text-align: center;
+    margin: 1.5rem;
 }
 
 .event-info--name {
-    color: var(--main-text-color);
     font-family: var(--header-font);
+    font-size: 2.5rem;
     font-weight: 600;
-    font-size: 40px;
-    line-height: 41px;
-    margin-top: 20px;
+    line-height: 2.6rem;
+    color: var(--main-text-color);
+    margin-top: 1.3rem;
 }
 
 .event-info--date {
+    font-size: 1.2rem;
     font-weight: 700;
+    line-height: 1.4rem;
     color: #37aeab;
-    font-weight: 700;
-    font-size: 19px;
-    line-height: 23px;
 }
 
 .event-info--location {
+    font-size: 1rem;
     font-style: italic;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    line-height: 1.2rem;
 }
 
 .event-info-price {
     font-family: var(--main-font);
-    color: var(--third-text-color);
+    font-size: 2rem;
     font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
+    line-height: 2.4rem;
+    color: var(--third-text-color);
     padding: 1rem 1.5rem;
 }
 
 .event-info--choser {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
     padding: 1rem 0rem 0rem;
 }
 
 .event-info--choser h4 {
-    flex: 1;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
     text-align: center;
-    font-size: 28px;
-    line-height: 39px;
+    flex: 1;
     padding: 0.5rem 2rem;
-    border-top: 1px solid #f56b9a;
-    border-right: 1px solid #f56b9a;
-    border-left: 1px solid #f56b9a;
+    border-top: 1px solid var(--main-text-color);
+    border-right: 1px solid var(--main-text-color);
+    border-left: 1px solid var(--main-text-color);
 }
 
 .event-info--choser-btn {
-    align-items: center;
-    text-align: center;
-    background-color: transparent;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
     color: var(--third-text-color);
-    font-size: 28px;
-    line-height: 39px;
+    background-color: transparent;
     padding: 0.5rem 1.5rem;
-    border: 1px solid #f56b9a;
-    border-right: 0px;
-    border-left: 0px;
-    border-bottom: 0px;
+    border: none;
+    border-top: 1px solid #f56b9a;
 }

@@ -1,3 +1,12 @@
+a {
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: var(--third-text-color);
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+}
+
 .footerNav__container {
     display: flex;
     gap: 0.5rem;
@@ -7,27 +16,17 @@
     background-color: var(--main-text-color);
 }
 
-a {
-    background-color: var(--third-text-color);
-    width: 0.7rem;
-    height: 0.7rem;
-    padding: 0;
-    border-radius: 50%;
-    border: none;
-    text-decoration: none;
-}
-
 .navButton {
     display: none;
 }
 
 .footerNav__wrapper {
-    display: flex;
-    position: fixed;
-    justify-content: center;
     width: 100%;
+    background-color: var(--background-color);
+    position: fixed;
     left: 0;
     bottom: 0;
+    display: flex;
+    justify-content: center;
     padding: 0.5rem;
-    background-color: var(--background-color);
 }

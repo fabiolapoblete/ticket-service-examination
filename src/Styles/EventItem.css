@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&family=Sansita&display=swap%27");
 
-a {
-    text-decoration: none;
-}
 
 .event__item--wrapper {
     display: flex;
@@ -10,27 +7,26 @@ a {
 }
 
 .event__item {
+    width: 100%;
     font-family: var(--main-font);
     color: var(--third-text-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     gap: 1rem;
 }
 
 .event__item--date {
-    display: flex;
-    font-weight: 700;
     font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    flex: 1;
+    word-spacing: 62.5rem;
     border: 1px solid var(--third-text-color);
     border-radius: 5px;
     padding: 1rem;
-    margin: 0.5rem;
-    margin-left: 0;
-    flex: 1;
-    text-align: center;
-    word-spacing: 62.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
 }
 
 .event__item--info {
@@ -46,9 +42,9 @@ a {
 }
 
 .event__item--location {
-    font-style: italic;
-    font-weight: 400;
     font-size: 0.8rem;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .event__item--timePrice-wrapper {
@@ -59,11 +55,13 @@ a {
 .event__item--time {
     font-size: 0.9rem;
 }
+
 .event__item--price {
-    color: var(--secondary-text-color);
     font-size: 1.1rem;
-    line-height: 20px;
+    line-height: 1.3rem;
+    color: var(--secondary-text-color);
 }
+
 .event__item--underscore {
     border-bottom: 1px solid white;
 }
